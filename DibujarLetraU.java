@@ -3,6 +3,16 @@ public class DibujarLetraU {
         int filas = 7;
         int columnas = 5;
 
+        /*  matriz {
+                    {- - - - -},
+                    {- - - - -},
+                    {- - - - -},
+                    {- - - - -},
+                    {- - - - -},
+                    {- - - - -},
+                    {- - - - -}
+            } */
+
         // Paso 1: Crear la matriz de caracteres
         char[][] matriz = new char[filas][columnas];
 
@@ -26,9 +36,10 @@ public class DibujarLetraU {
 
         // Paso 4: Dibujar la base de la U (última fila)
         // COMPLETA AQUÍ: pon '*' en las columnas centrales de la última fila
-        for (int i = 6; i == filas - 1; i++){
-            for (int j = 1; j >= columnas - 4 && j < columnas - 1; j++)
-            matriz[i][j] = '*';
+        for (int i = filas - 1; i < filas; i++) {
+            matriz[i][1] = '*';
+            matriz[i][2] = '*';
+            matriz[i][3] = '*';
         }
 
         // Paso 5: Mostrar la matriz en consola
